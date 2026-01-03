@@ -5,32 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FloatingNav } from "@/components/FloatingNav";
 
-const upcomingTrips = [
-  {
-    id: 1,
-    name: "European Adventure",
-    destination: "Paris → Rome → Barcelona",
-    startDate: "Mar 15, 2025",
-    endDate: "Mar 28, 2025",
-    budget: 3500,
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=300&fit=crop",
-  },
-  {
-    id: 2,
-    name: "Japan Discovery",
-    destination: "Tokyo → Kyoto → Osaka",
-    startDate: "May 1, 2025",
-    endDate: "May 14, 2025",
-    budget: 4200,
-    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=300&fit=crop",
-  },
-];
+const upcomingTrips = [];
 
-const recommendedDestinations = [
-  { name: "Bali, Indonesia", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&h=200&fit=crop", rating: 4.9 },
-  { name: "Santorini, Greece", image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=200&h=200&fit=crop", rating: 4.8 },
-  { name: "Machu Picchu, Peru", image: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=200&h=200&fit=crop", rating: 4.9 },
-];
+const recommendedDestinations = [];
 
 export default function Dashboard() {
   return (
@@ -66,10 +43,10 @@ export default function Dashboard() {
           className="grid grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {[
-            { label: "Total Trips", value: "12", icon: MapPin, color: "text-primary" },
-            { label: "Countries Visited", value: "8", icon: TrendingUp, color: "text-secondary" },
-            { label: "Upcoming", value: "2", icon: Calendar, color: "text-accent" },
-            { label: "Total Saved", value: "$1,240", icon: TrendingUp, color: "text-primary" },
+            { label: "Total Trips", value: "0", icon: MapPin, color: "text-primary" },
+            { label: "Countries Visited", value: "0", icon: TrendingUp, color: "text-secondary" },
+            { label: "Upcoming", value: "0", icon: Calendar, color: "text-accent" },
+            { label: "Total Saved", value: "$0", icon: TrendingUp, color: "text-primary" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

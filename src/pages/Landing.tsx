@@ -39,8 +39,8 @@ export default function Landing() {
       >
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <GlobeIcon className="w-10 h-10" />
-            <span className="text-2xl font-heading font-bold gradient-text">GlobeTrotter</span>
+            <img src="/logo.png" alt="Odoo Logo" className="w-12 h-12 object-contain" />
+            <span className="text-2xl font-heading font-bold gradient-text">Odoo Hack</span>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/auth">
@@ -104,9 +104,9 @@ export default function Landing() {
               className="flex gap-8 pt-4"
             >
               {[
-                { value: "50K+", label: "Travelers" },
-                { value: "120+", label: "Countries" },
-                { value: "1M+", label: "Trips Planned" },
+                { value: "0", label: "Travelers" },
+                { value: "0", label: "Countries" },
+                { value: "0", label: "Trips Planned" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl font-heading font-bold gradient-text">{stat.value}</div>
@@ -131,41 +131,7 @@ export default function Landing() {
               >
                 <GlobeIcon className="w-full h-full" />
               </motion.div>
-              
-              {/* Floating Cards */}
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.8, type: "spring" }}
-                className="absolute top-10 -left-4 glass-card p-4 shadow-glow"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm">Paris, France</div>
-                    <div className="text-xs text-muted-foreground">3 days planned</div>
-                  </div>
-                </div>
-              </motion.div>
 
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1, type: "spring" }}
-                className="absolute bottom-20 -right-4 glass-card p-4 shadow-glow"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Wallet className="w-5 h-5 text-secondary" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm">Budget: $2,500</div>
-                    <div className="text-xs text-muted-foreground">On track!</div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -11,52 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const trips = [
-  {
-    id: 1,
-    name: "European Adventure",
-    destination: "Paris → Rome → Barcelona",
-    startDate: "Mar 15, 2025",
-    endDate: "Mar 28, 2025",
-    budget: 3500,
-    status: "upcoming",
-    cities: 3,
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=300&fit=crop",
-  },
-  {
-    id: 2,
-    name: "Japan Discovery",
-    destination: "Tokyo → Kyoto → Osaka",
-    startDate: "May 1, 2025",
-    endDate: "May 14, 2025",
-    budget: 4200,
-    status: "upcoming",
-    cities: 3,
-    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=300&fit=crop",
-  },
-  {
-    id: 3,
-    name: "Thailand Escape",
-    destination: "Bangkok → Chiang Mai → Phuket",
-    startDate: "Jan 5, 2025",
-    endDate: "Jan 18, 2025",
-    budget: 2800,
-    status: "completed",
-    cities: 3,
-    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=400&h=300&fit=crop",
-  },
-  {
-    id: 4,
-    name: "California Road Trip",
-    destination: "LA → San Francisco → San Diego",
-    startDate: "Nov 10, 2024",
-    endDate: "Nov 20, 2024",
-    budget: 2200,
-    status: "completed",
-    cities: 3,
-    image: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=400&h=300&fit=crop",
-  },
-];
+const trips = [];
 
 export default function Trips() {
   return (
@@ -121,15 +76,14 @@ export default function Trips() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-                  
+
                   {/* Status Badge */}
                   <div className="absolute top-3 left-3">
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
-                        trip.status === "upcoming"
+                      className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${trip.status === "upcoming"
                           ? "bg-primary/80 text-primary-foreground"
                           : "bg-muted/80 text-muted-foreground"
-                      }`}
+                        }`}
                     >
                       {trip.status === "upcoming" ? "Upcoming" : "Completed"}
                     </span>

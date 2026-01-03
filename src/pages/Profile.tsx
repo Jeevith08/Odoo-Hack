@@ -61,32 +61,25 @@ export default function Profile() {
             <CardContent className="-mt-12 pb-6">
               <div className="flex items-end gap-4">
                 <div className="relative">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="w-24 h-24 rounded-2xl bg-card border-4 border-card overflow-hidden shadow-elevated"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop"
-                      alt="Profile"
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
+                  <div className="w-24 h-24 rounded-2xl bg-muted border-4 border-card overflow-hidden shadow-elevated flex items-center justify-center">
+                    <User className="w-12 h-12 text-muted-foreground" />
+                  </div>
                   <button className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-glow">
                     <Camera className="w-4 h-4" />
                   </button>
                 </div>
                 <div className="flex-1 pb-2">
-                  <h2 className="text-xl font-heading font-bold">Alex Thompson</h2>
-                  <p className="text-muted-foreground">alex@example.com</p>
+                  <h2 className="text-xl font-heading font-bold">Your Name</h2>
+                  <p className="text-muted-foreground">your.email@example.com</p>
                 </div>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border">
                 {[
-                  { label: "Trips", value: "12" },
-                  { label: "Countries", value: "8" },
-                  { label: "Photos", value: "324" },
+                  { label: "Trips", value: "0" },
+                  { label: "Countries", value: "0" },
+                  { label: "Photos", value: "0" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <p className="text-2xl font-heading font-bold gradient-text">{stat.value}</p>

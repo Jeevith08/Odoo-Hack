@@ -61,9 +61,9 @@ export default function Auth() {
         className="w-full max-w-md relative z-10"
       >
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center gap-2 mb-8">
-          <GlobeIcon className="w-12 h-12" />
-          <span className="text-3xl font-heading font-bold gradient-text">GlobeTrotter</span>
+        <Link to="/" className="flex flex-col items-center justify-center gap-2 mb-8">
+          <img src="/logo.png" alt="Odoo Logo" className="w-20 h-20 object-contain" />
+          <span className="text-3xl font-heading font-bold gradient-text">Odoo Hack</span>
         </Link>
 
         <Card variant="glass" className="backdrop-blur-2xl">
